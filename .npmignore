@@ -1,0 +1,8 @@
+test
+scripts
+.npmignore
+.gitignore
+.travis.yml
+tsconfig*.json
+index.ts
+dist-*/test

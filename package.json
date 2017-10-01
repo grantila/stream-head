@@ -1,0 +1,39 @@
+{
+  "name": "stream-head",
+  "description": "Peek the first couple of bytes from a stream",
+  "license": "MIT",
+  "version": "0.0.0",
+  "author": "Gustaf Räntilä <g.rantila@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grantila/stream-head.git"
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./es6.js",
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "test": "./node_modules/.bin/mocha dist-es6/test dist-es5/test"
+  },
+  "pre-commit": [
+    "build",
+    "test"
+  ],
+  "keywords": [
+    "stream",
+    "head",
+    "peek",
+    "promise"
+  ],
+  "dependencies": {
+    "buffer-peek-stream": "1.x"
+  },
+  "devDependencies": {
+    "@types/mocha": "2.x",
+    "@types/node": "8.x",
+    "chai": "4.x",
+    "mocha": "3.x",
+    "pre-commit": "1.x",
+    "through2": "2.x",
+    "typescript": "2.5.x"
+  }
+}

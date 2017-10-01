@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"lib": [ "es2015", "es2017" ],
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"module": "commonjs",
+		"types": [ "node", "mocha" ]
+	},
+	"include": [
+		"index.ts",
+		"test"
+	]
+}
