@@ -5,6 +5,8 @@
 
 This package is a Promise-based version of [`buffer-peek-stream`](https://www.npmjs.com/package/buffer-peek-stream), or a *"POSIX [`head(1)`](http://man7.org/linux/man-pages/man1/head.1.html) for Node.js streams"*.
 
+This package provides TypeScript types.
+
 # API
 
 The default (and only) exported function takes a readable stream and returns a new stream (together with a buffer). The old stream must not be used anymore, it will be piped to the returned stream. The returned stream will contain everything from the input stream, the first `n` bytes will be **copied** to the returned buffer, not *consumed*.
