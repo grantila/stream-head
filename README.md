@@ -1,5 +1,6 @@
 [![npm version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
+[![coverage status][coverage-image]][coverage-url]
 
 # stream-head
 
@@ -27,3 +28,5 @@ head; // A Buffer with the first 64 bytes (or less if the stream was smaller)
 [npm-url]: https://npmjs.org/package/stream-head
 [travis-image]: https://img.shields.io/travis/grantila/stream-head.svg
 [travis-url]: https://travis-ci.org/grantila/stream-head
+[coverage-image]: https://coveralls.io/repos/github/grantila/stream-head/badge.svg?branch=master
+[coverage-url]: https://coveralls.io/github/grantila/stream-head?branch=master
