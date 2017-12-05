@@ -4,6 +4,7 @@ import * as through2 from 'through2'
 
 import 'mocha'
 import { expect } from 'chai'
+import { spy, assert } from 'sinon'
 
 import streamHead from '../'
 
@@ -92,5 +93,21 @@ describe( 'stream-head', ( ) =>
 
 		const buf = stream.read( 1 );
 		expect( buf.toString( ) ).to.equal( "." );
+	} );
+
+	it( 'should return rejected promise on erroneous streams',
+		async ( ) =>
+	{
+		const notCalled = spy( );
+		const called = spy( );
+
+		const inStream = < NodeJS.ReadableStream >< any >"foobar";
+
+		const sh = streamHead( inStream, { bytes: 2 } );
+
+		await sh.then( notCalled, called );
+
+		assert.notCalled( notCalled );
+		assert.calledOnce( called );
 	} );
 } );

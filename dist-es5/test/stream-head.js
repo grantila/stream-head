@@ -39,6 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var through2 = require("through2");
 require("mocha");
 var chai_1 = require("chai");
+var sinon_1 = require("sinon");
 var _1 = require("../");
 describe('stream-head', function () {
     it('should be possible to have a zero bytes in an empty stream', function () { return __awaiter(_this, void 0, void 0, function () {
@@ -127,6 +128,24 @@ describe('stream-head', function () {
                     _a = _b.sent(), stream = _a.stream, head = _a.head;
                     buf = stream.read(1);
                     chai_1.expect(buf.toString()).to.equal(".");
+                    return [2 /*return*/];
+            }
+        });
+    }); });
+    it('should return rejected promise on erroneous streams', function () { return __awaiter(_this, void 0, void 0, function () {
+        var notCalled, called, inStream, sh;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    notCalled = sinon_1.spy();
+                    called = sinon_1.spy();
+                    inStream = "foobar";
+                    sh = _1.default(inStream, { bytes: 2 });
+                    return [4 /*yield*/, sh.then(notCalled, called)];
+                case 1:
+                    _a.sent();
+                    sinon_1.assert.notCalled(notCalled);
+                    sinon_1.assert.calledOnce(called);
                     return [2 /*return*/];
             }
         });
