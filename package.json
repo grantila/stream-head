@@ -12,9 +12,11 @@
   "main": "./es6.js",
   "scripts": {
     "build": "./scripts/build.sh",
-    "test": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --bail --check-leaks dist-es6/test dist-es5/test",
+    "mocha": "node_modules/.bin/mocha --bail --check-leaks dist-es6/test dist-es5/test",
+    "test": "node_modules/.bin/nyc npm run mocha",
     "test-nocov": "./node_modules/.bin/mocha dist-es6/test dist-es5/test",
-    "buildtest": "npm run build && npm run test"
+    "buildtest": "npm run build && npm run test",
+    "coverage": "node_modules/.bin/nyc report --reporter=html"
   },
   "pre-commit": [
     "build",
@@ -34,7 +36,7 @@
     "@types/node": "8.x",
     "chai": "4.x",
     "coveralls": "2.x",
-    "istanbul": "1.1.0-alpha.1",
+    "nyc": "11.x",
     "mocha": "3.x",
     "pre-commit": "1.x",
     "sinon": "4.x",
