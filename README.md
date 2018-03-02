@@ -4,6 +4,8 @@
 
 # stream-head
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/grantila/stream-head.svg)](https://greenkeeper.io/)
+
 This package is a Promise-based alternative to [`buffer-peek-stream`](https://www.npmjs.com/package/buffer-peek-stream), or a *"POSIX [`head(1)`](http://man7.org/linux/man-pages/man1/head.1.html) for Node.js streams"*. It depends only on [`through2`](https://www.npmjs.com/package/through2).
 
 This package provides TypeScript types.
