@@ -2,5 +2,6 @@
 coverage/
 node_modules/
 alternative
-yarn.lock
+dist
+yarn*
 package-lock.json

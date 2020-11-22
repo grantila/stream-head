@@ -1,14 +1,15 @@
 {
 	"compilerOptions": {
 		"declaration": true,
-		"lib": [ "es2015", "es2017" ],
+		"lib": [ "DOM", "es2017" ],
 		"sourceMap": true,
 		"moduleResolution": "node",
 		"module": "commonjs",
-		"types": [ "node", "mocha" ]
+		"noEmit": true,
+		"target": "es6",
+		"types": [ "node", "jest" ]
 	},
 	"include": [
-		"index.ts",
-		"test"
+		"lib"
 	]
 }
