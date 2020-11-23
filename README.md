@@ -1,6 +1,8 @@
 [![npm version][npm-image]][npm-url]
+[![downloads][downloads-image]][npm-url]
 [![build status][build-image]][build-url]
 [![coverage status][coverage-image]][coverage-url]
+[![Language grade: JavaScript][lgtm-image]][lgtm-url]
 
 
 # stream-head
@@ -38,7 +40,10 @@ In tsconfig.json, `lib` needs to include `"DOM"` and `types` need to include `"n
 
 [npm-image]: https://img.shields.io/npm/v/stream-head.svg
 [npm-url]: https://npmjs.org/package/stream-head
+[downloads-image]: https://img.shields.io/npm/dm/stream-head.svg
 [build-image]: https://img.shields.io/github/workflow/status/grantila/stream-head/Master.svg
 [build-url]: https://github.com/grantila/stream-head/actions?query=workflow%3AMaster
 [coverage-image]: https://coveralls.io/repos/github/grantila/stream-head/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/github/grantila/stream-head?branch=master
+[lgtm-image]: https://img.shields.io/lgtm/grade/javascript/g/grantila/stream-head.svg?logo=lgtm&logoWidth=18
+[lgtm-url]: https://lgtm.com/projects/g/grantila/stream-head/context:javascript
