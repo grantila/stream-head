@@ -121,6 +121,7 @@ function streamHeadWhatwg( readable: ReadableStream, bytes: number )
 
 		function complete( )
 		{
+			/* istanbul ignore next */
 			if ( isComplete )
 				return null;
 			isComplete = true;
