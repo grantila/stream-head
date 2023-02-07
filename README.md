@@ -14,6 +14,12 @@ It handles both Node.js streams and Whatwg streams (the Web *Streams API* used i
 This package provides TypeScript types.
 
 
+## Versions
+
+From v3:
+ * This package is a pure ESM, no CommonJS support
+
+
 # API
 
 The default (and only) exported function takes a readable stream and returns a new readable stream `stream` of the same type as the input stream, together with `head` of type `Uint8Array`. The old stream must not be used anymore, it will be piped to the returned stream. The returned stream will contain everything from the input stream, the first *n* bytes will be **copied** to the returned buffer, not *consumed*. If the stream doesn't contain *n* bytes, `head` will be smaller. If the combined chunks up until *n* are larger than *n*, then `head` will be larger than *n* too (it's not truncated).

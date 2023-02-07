@@ -1,8 +1,8 @@
-'use strict'
+import { jest } from '@jest/globals'
 
 import "web-streams-polyfill/es2018"
 
-import * as through2 from 'through2'
+import through2 from 'through2'
 
 import streamHead from './'
 import { Buffer } from "buffer";
@@ -350,7 +350,7 @@ describe( 'Whatwg streams', ( ) =>
 		expect( notCalled ).toHaveBeenCalledTimes( 0 );
 		expect( called ).toHaveBeenCalledTimes( 1 );
 		expect( called.mock.calls[ 0 ][ 0 ] ).toBeInstanceOf( Error );
-		expect( called.mock.calls[ 0 ][ 0 ].message )
+		expect( ( called.mock.calls[ 0 ][ 0 ] as any ).message )
 			.toMatch( /Expecting chunk to be a typed array/ )
 	} );
 
